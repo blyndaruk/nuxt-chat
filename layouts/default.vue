@@ -92,7 +92,7 @@
 export default {
   data () {
     return {
-      clipped: false,
+      clipped: true,
       drawer: false,
       fixed: false,
       items: [
@@ -107,7 +107,7 @@ export default {
           to: '/inspire'
         }
       ],
-      miniVariant: false,
+      miniVariant: true,
       right: true,
       rightDrawer: false,
       title: 'Vuetify.js'

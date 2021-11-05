@@ -7,6 +7,7 @@
       </v-card>
       <v-card>
         <v-card-title class="headline">
+          Test {{ test }}
           Welcome to the Vuetify + Nuxt.js template
         </v-card-title>
         <v-card-text>
@@ -75,3 +76,14 @@
     </v-col>
   </v-row>
 </template>
+
+<script>
+export default {
+  async asyncData ({ $http }) {
+    const test = await $http.$get('/api/test')
+    return {
+      test
+    }
+  }
+}
+</script>
